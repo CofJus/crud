@@ -5,7 +5,7 @@
 package com.hhu.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.hhu.dao.UserDao;
+import com.hhu.repository.UserDao;
 import com.hhu.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
