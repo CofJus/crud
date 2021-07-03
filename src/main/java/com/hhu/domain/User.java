@@ -12,5 +12,5 @@ public class User {
     private String username;//用户名
     private String password;//密码
     private String role;//角色
-    private boolean state;//状态
+    public int state;//状态
 }

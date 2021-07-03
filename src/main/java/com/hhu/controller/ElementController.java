@@ -19,10 +19,6 @@ import java.util.List;
 @Slf4j
 public class ElementController {
 
-  @RequestMapping("/test")
-    public String test(){
-        return "ok";
-    }
 
     @Autowired
     private ElementService elementService;

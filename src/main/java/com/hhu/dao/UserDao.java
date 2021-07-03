@@ -1,3 +1,8 @@
+
+/**
+ * @author CJH
+ * UserDao
+ */
 package com.hhu.dao;
 
 import com.hhu.domain.User;

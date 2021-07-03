@@ -1,3 +1,7 @@
+/**
+ * @author CJH
+ * 登录controller
+ */
 package com.hhu.controller;
 
 import com.alibaba.fastjson.JSON;
@@ -20,14 +24,17 @@ public class LoginController {
     public String login(@RequestBody User user){
 
         String flag="error";//控制登录成功失败
+        int power=0;
         User us=userDao.getUserByMessage(user.getUsername(),user.getPassword());
         System.out.println("user:"+us);
         HashMap<String, Object> res = new HashMap<>();
         if(us!=null)
         {
             flag="ok";
+            power=us.state;
         }
         res.put("flag",flag);
+        res.put("power",power);
         res.put("user",user);
         String res_json=JSON.toJSONString(res);
         return res_json;
