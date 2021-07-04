@@ -15,8 +15,6 @@ import java.util.List;
 @Service
 public class ElementServiceImpl implements ElementService {
 
-    //TODO 调用elementMapper
-
     @Autowired
     private ElementMapper elementMapper;
 
@@ -25,7 +23,7 @@ public class ElementServiceImpl implements ElementService {
     }
 
     public void update(Element element) {
-
+        elementMapper.update(element);
     }
 
     public List<Element> getAll() {
@@ -33,10 +31,10 @@ public class ElementServiceImpl implements ElementService {
     }
 
     public Element getElementByName(String name) {
-        return null;
+        return elementMapper.queryByName(name);
     }
 
     public void deleteByName(String name) {
-
+        elementMapper.delete(name);
     }
 }
