@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Ji Rui
  * @date 2021/6/28 21:48
  */
+
 @SpringBootApplication
 @MapperScan("com.hhu.repository")
 public class Application {
