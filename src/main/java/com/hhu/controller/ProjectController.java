@@ -33,9 +33,9 @@ public class ProjectController {
         projectService.update(project);
     }
 
-    @GetMapping("/delete/{pname}")
-    public void delete(@PathVariable String pname) {
-        projectService.deleteByName(pname);
+    @GetMapping("/delete/{projectName}")
+    public void delete(@PathVariable String projectName) {
+        projectService.deleteByName(projectName);
     }
 
     @GetMapping("/getAll")
@@ -45,8 +45,8 @@ public class ProjectController {
         return list;
     }
 
-    @GetMapping("/getProjectByName/{pname}")
-    public Project getProjectByName(@PathVariable String pname) {
-        return projectService.getProjectByName(pname);
+    @GetMapping("/getProjectByName/{projectName}")
+    public Project getProjectByName(@PathVariable String projectName) {
+        return projectService.getProjectByName(projectName);
     }
 }

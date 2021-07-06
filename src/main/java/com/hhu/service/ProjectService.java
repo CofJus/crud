@@ -16,7 +16,7 @@ public interface ProjectService {
 
     List<Project> getAll();
 
-    Project getProjectByName(String pname);
+    Project getProjectByName(String projectName);
 
-    void deleteByName(String pname);
+    void deleteByName(String projectName);
 }

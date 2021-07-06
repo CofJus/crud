@@ -11,17 +11,17 @@ import lombok.Data;
 
 public class Project {
 
-    private String pname;//项目名称
+    private String projectName;//项目名称
 
-    private String ptype;//项目类型
+    private String projectType;//项目类型
 
-    private String pstage;//项目阶段
+    private String projectStage;//项目阶段
 
-    private String powner;//项目业主
+    private String projectOwner;//项目业主
 
-    private String pgroup;//项目业主所属集团
+    private String projectGroup;//项目业主所属集团
 
-    private String pdesigninstitute;//设计单位
+    private String projectDesignInstitute;//设计单位
 
-    private String pdate;//日期
+    private String projectDate;//日期
 }

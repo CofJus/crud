@@ -14,19 +14,19 @@ import java.util.List;
 @Mapper
 public interface ProjectMapper {
 
-    @Insert("Insert INTO project (p_name, p_type, p_stage, p_owner, p_group, p_design_institute, p_date)" +
-            "VALUE(#{pname}, #{ptype}, #{pstage}, #{powner}, #{pgroup}, #{pdesigninstitute}, #{pdate})")
+    @Insert("Insert INTO project (project_name, project_type, project_stage, project_owner, project_group, project_design_institute, project_date)" +
+            "VALUE(#{projectName}, #{projectType}, #{projectStage}, #{projectOwner}, #{projectGroup}, #{projectDesignInstitute}, #{projectDate})")
     void insert(Project project);
 
-    @Update("UPDATE project SET p_type = #{ptype},p_stage = #{pstage},p_owner = #{powner},p_group = #{pgroup},p_design_institute = #{pdesigninstitute},p_date = #{pdate} WHERE p_name = #{pname}")
+    @Update("UPDATE project SET project_type = #{projectType},project_stage = #{projectStage},project_owner = #{projectOwner},project_group = #{projectGroup},project_design_institute = #{projectDesignInstitute},project_date = #{projectDate} WHERE project_name = #{projectName}")
     void update(Project project);
 
     @Select("SELECT * FROM project;")
     List<Project> queryAll();
 
-    @Select("SELECT * FROM project WHERE p_name = #{pname}")
-    Project queryByName(String pname);
+    @Select("SELECT * FROM project WHERE project_name = #{projectName}")
+    Project queryByName(String projectName);
 
-    @Delete("DELETE FROM project WHERE p_name = #{pname}")
-    void delete(String pname);
+    @Delete("DELETE FROM project WHERE project_name = #{projectName}")
+    void delete(String projectName);
 }
