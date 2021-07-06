@@ -18,7 +18,17 @@ public interface ElementMapper {
             "VALUE(#{name}, #{avgTemperature}, #{lowestTemperature}, #{highestTemperature}, #{avgTemperatureInHottest}, #{maxFrozenDepth}, #{avgWindSpeed}, #{maxWindSpeed}, #{avgThunderstorm}, #{pollutionGrade})")
     void insert(Element element);
 
-    @Update("UPDATE element SET avg_temperature = #{avgTemperature},lowest_temperature = #{lowestTemperature},highest_temperature = #{highestTemperature},avg_temperature_in_hottest = #{avgTemperatureInHottest},max_frozen_depth = #{maxFrozenDepth},avg_wind_speed = #{avgWindSpeed},max_wind_speed = #{maxWindSpeed},avg_thunderstorm = #{avgThunderstorm},pollution_grade = #{pollutionGrade} WHERE name = #{name}")
+    @Update("UPDATE element" +
+            "SET average_temperature = #{averageTemperature}, " +
+            "lowest_temperature = #{lowestTemperature}, " +
+            "highest_temperature = #{highestTemperature}, " +
+            "avg_temperature_in_hottest = #{avgTemperatureInHottest}, " +
+            "max_frozen_depth = #{maxFrozenDepth}, " +
+            "avg_wind_speed = #{avgWindSpeed}, " +
+            "max_wind_speed = #{maxWindSpeed}, " +
+            "avg_thunderstorm = #{avgThunderstorm}, " +
+            "pollution_grade = #{pollutionGrade} " +
+            "WHERE name = #{name}")
     void update(Element element);
 
     @Select("SELECT * FROM element;")

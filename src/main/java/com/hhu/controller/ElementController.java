@@ -12,21 +12,16 @@ import java.util.List;
  * @author Ji Rui
  * @date 2021/6/28 22:46
  */
-
 @RestController
 @RequestMapping("/element")
-
 @Slf4j
 public class ElementController {
-
-
     @Autowired
     private ElementService elementService;
 
     @PostMapping("/add")
     public void add(@RequestBody Element element) {
         elementService.add(element);
-
     }
 
     @PostMapping("/update")

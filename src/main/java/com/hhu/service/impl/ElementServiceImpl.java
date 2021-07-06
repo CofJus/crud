@@ -18,22 +18,27 @@ public class ElementServiceImpl implements ElementService {
     @Autowired
     private ElementMapper elementMapper;
 
+    @Override
     public void add(Element element) {
         elementMapper.insert(element);
     }
 
+    @Override
     public void update(Element element) {
         elementMapper.update(element);
     }
 
+    @Override
     public List<Element> getAll() {
         return elementMapper.queryAll();
     }
 
+    @Override
     public Element getElementByName(String name) {
         return elementMapper.queryByName(name);
     }
 
+    @Override
     public void deleteByName(String name) {
         elementMapper.delete(name);
     }
