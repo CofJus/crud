@@ -13,21 +13,21 @@ import java.util.List;
 @Mapper
 public interface AddressMapper {
 
-        @Insert("Insert INTO Address (L_name, Install_capacity, Land_area, Alitute,  Latitude,Longitude, Total_solarradiation1, Total_solarradiation2, Radition_angle)" +
-                "VALUE(#{lname}, #{installcapacity}, #{landarea}, #{alitute},  #{latitude},#{longitude}, #{totalsolarradiation1}, #{totalsolarradiation2}, #{raditionangle})")
+        @Insert("Insert INTO address (location_name, install_capacity, land_area, alitute,  latitude,longitude, total_solar_radiation1, total_solar_radiation2, radition_angle)" +
+                "VALUE(#{locationName}, #{installCapacity}, #{landArea}, #{alitute},  #{latitude},#{longitude}, #{totalSolarRadiation1}, #{totalSolarRadiation2}, #{raditionAngle})")
         void insert(Address address);
 
-        @Update("UPDATE Address SET Install_capacity = #{installcapacity},Land_area = #{landarea},Alitute = #{alitute},Latitude = #{latitude},Longitude = #{longitude},Total_solarradiation1 = #{totalsolarradiation1},Total_solarradiation2 = #{totalsolarradiation2},Radition_angle = #{raditionangle} WHERE L_name = #{lname}")
+        @Update("UPDATE address SET install_capacity = #{installCapacity},land_area = #{landArea},alitute = #{alitute},latitude = #{latitude},longitude = #{longitude},total_solar_radiation1 = #{totalSolarRadiation1},total_solar_radiation2 = #{totalSolarRadiation2},radition_angle = #{raditionAngle} WHERE location_name = #{locationName}")
         void update(Address address);
 
-        @Select("SELECT * FROM Address;")
+        @Select("SELECT * FROM address;")
         List<Address> queryAll();
 
-        @Select("SELECT * FROM Address WHERE L_name = #{lname}")
-        Address queryBylname(String lname);
+        @Select("SELECT * FROM address WHERE location_name = #{locationName}")
+        Address queryBylocationName(String locationName);
 
-        @Delete("DELETE FROM Address WHERE L_name = #{lname}")
-        void delete(String lname);
+        @Delete("DELETE FROM address WHERE location_name = #{locationName}")
+        void delete(String locationName);
 
 
 }

@@ -33,11 +33,11 @@ public class ProjectServiceImpl implements ProjectService {
         return projectMapper.queryAll();
     }
 
-    public Project getProjectByName(String pname) {
-        return projectMapper.queryByName(pname);
+    public Project getProjectByName(String projectName) {
+        return projectMapper.queryByName(projectName);
     }
 
-    public void deleteByName(String pname) {
-        projectMapper.delete(pname);
+    public void deleteByName(String projectName) {
+        projectMapper.delete(projectName);
     }
 }

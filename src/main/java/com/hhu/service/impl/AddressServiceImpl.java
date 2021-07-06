@@ -30,11 +30,11 @@ public class AddressServiceImpl implements AddressService {
         return addressMapper.queryAll();
     }
 
-    public Address getAddressBylname(String lname) {
-        return addressMapper.queryBylname(lname);
+    public Address getAddressBylocationName(String locationName) {
+        return addressMapper.queryBylocationName(locationName);
     }
 
-    public void deleteBylname(String lname) {
-        addressMapper.delete(lname);
+    public void deleteBylocationName(String locationName) {
+        addressMapper.delete(locationName);
     }
 }

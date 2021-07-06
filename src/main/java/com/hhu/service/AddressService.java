@@ -15,7 +15,7 @@ public interface AddressService {
 
     List<Address> getAll();
 
-    Address getAddressBylname(String lname);
+    Address getAddressBylocationName(String locationName);
 
-    void deleteBylname(String lname);
+    void deleteBylocationName(String locationName);
 }

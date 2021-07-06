@@ -30,9 +30,9 @@ public class AddressController {
         addressService.update(address);
     }
 
-    @GetMapping("/delete/{lname}")
-    public void delete(@PathVariable String lname) {
-        addressService.deleteBylname(lname);
+    @GetMapping("/delete/{locationName}")
+    public void delete(@PathVariable String locationName) {
+        addressService.deleteBylocationName(locationName);
     }
 
     @GetMapping("/getAll")
@@ -42,8 +42,8 @@ public class AddressController {
         return list;
     }
 
-    @GetMapping("/getAddressBylname/{lname}")
-    public Address getAddressBylname(@PathVariable String lname) {
-        return addressService.getAddressBylname(lname);
+    @GetMapping("/getAddressBylocationName/{locationName}")
+    public Address getAddressBylocationName(@PathVariable String locationName) {
+        return addressService.getAddressBylocationName(locationName);
     }
 }
